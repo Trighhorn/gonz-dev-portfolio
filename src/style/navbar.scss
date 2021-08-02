@@ -1,0 +1,24 @@
+.navbarWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: grey;
+    width: 100vw;
+    height: 7vh;
+    color: honeydew;
+    .right-side { 
+        display: flex;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        gap: 5vw;
+        a{
+            color: honeydew;
+            text-decoration: none;
+        }
+    }
+    .left-side {
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+    } 
+}

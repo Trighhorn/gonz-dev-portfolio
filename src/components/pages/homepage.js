@@ -7,7 +7,7 @@ import { faFile } from '@fortawesome/free-solid-svg-icons'
 
 function Homepage() {
     return(
-        <div className="homepage">
+        <div className="homepage pageWrapper">
             <img className="avatar" alt="Abrahan Gonzalez" src="https://soe.ukzn.ac.za/wp-content/uploads/2018/04/profile-placeholder.png"/>
             <div className="bio">
             Hello! I'm Abrahan and I'm a FullStack Software Developer.
