@@ -6,9 +6,9 @@ function Navbar() {
     <div className="navbarWrapper">
       <div className="left-side"> AG </div>
       <nav className="right-side">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        <NavLink to="/portfolio">Portfolio</NavLink>
+        <NavLink exact to="/" activeClassName="navLinkActive">Home</NavLink>
+        <NavLink to="/contact" activeClassName="navLinkActive">Contact</NavLink>
+        <NavLink to="/portfolio" activeClassName="navLinkActive">Portfolio</NavLink>
       </nav>
     </div>
   );

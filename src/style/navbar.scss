@@ -6,15 +6,38 @@
     width: 100vw;
     height: 7vh;
     color: honeydew;
+
+    
+    
+
     .right-side { 
         display: flex;
         padding-left: 2vw;
         padding-right: 2vw;
         gap: 5vw;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid transparent;
+        transition: 0.5s ease-in-out;
+        height: 100%;
+        .navLinkActive {
+            border-bottom: 2px solid honeydew;
+            color: honeydew;
+        }
+        
         a{
             color: honeydew;
             text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                transition: 0.5s ease-in-out;
+                border-bottom: 2px solid honeydew;
+            }
         }
+        
+        
+        
     }
     .left-side {
         display: flex;
