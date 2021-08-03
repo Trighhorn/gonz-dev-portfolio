@@ -1,7 +1,9 @@
 .contact-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  color: #ffffff;
   .contact-info {
+    background-color: #181818;
     display: flex;
     align-items: center;
     justify-content: center;

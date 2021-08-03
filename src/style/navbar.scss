@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: grey;
+    background-color: #212121;
     width: 100vw;
     height: 7vh;
-    color: honeydew;
+    color: #FFFFFF;
     
     
 
@@ -20,18 +20,18 @@
         transition: 0.5s ease-in-out;
         height: 100%;
         .navLinkActive {
-            border-bottom: 2px solid honeydew;
-            color: honeydew;
+            border-bottom: 2px solid #FFFFFF;
+            color: #FFFFFF;
         }
         
         a{
-            color: honeydew;
+            color: #FFFFFF;
             text-decoration: none;
             border-bottom: 2px solid transparent;
             transition: 0.5s ease-in-out;
             &:hover {
                 transition: 0.5s ease-in-out;
-                border-bottom: 2px solid honeydew;
+                border-bottom: 2px solid #FFFFFF;
             }
         }
         
