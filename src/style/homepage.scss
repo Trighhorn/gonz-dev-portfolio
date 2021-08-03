@@ -5,15 +5,15 @@
     justify-items: center;
     background-image: url(https://images.unsplash.com/photo-1476362555312-ab9e108a0b7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .avatar {
-    width: 215px;
-    height: 215px;
+    width: 12vw;
+    height: 12vw;
     border-radius: 150px;
 }
 .bio {
-    font-size: 1.5em;
+    font-size: 2vw;
     width: 60%;
     color: #FFFFFF;
 }
@@ -23,9 +23,7 @@
     justify-content: center;
     width: 60%;
     .link {
+        font-size: 10vw;
         color: #FFFFFF;
-    }
-    .linkedin {
-        border-radius: 100px;
     }
 }
