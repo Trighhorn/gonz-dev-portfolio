@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contact() {
   return (
-    <div className="contact-page pageWrapper">
+    <div className="contact-page page-wrapper">
       <div
         className="contact-image"
         style={{
@@ -28,17 +28,13 @@ function Contact() {
           </div>
           <div className="bullet-point">
             <div className="font-awesome-icon">
-              <FontAwesomeIcon
-                icon={faMapMarkedAlt}
-              />
+              <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <div className="text">abgonzdev@gmail.com</div>
           </div>
           <div className="bullet-point">
             <div className="font-awesome-icon">
-              <FontAwesomeIcon
-                icon={faEnvelope}
-              />
+              <FontAwesomeIcon icon={faMapMarkedAlt} />
             </div>
             <div className="text">Salt Lake City, UT</div>
           </div>
