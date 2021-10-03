@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PortfolioItem from "../portfolio/portfolioitem";
+import PortfolioItem from "./portfolioitem";
 
 function Portfolio() {
   const [data, setData] = useState(null);
@@ -23,9 +23,18 @@ function Portfolio() {
         <div>Loading...</div>
       ) : (
         <div className="portfolio-contaner">
-          {data.map((item) => {
-            return <PortfolioItem key={item.id} item={item} />;
-          })}
+          {data.map(
+            (item: {
+              id: string;
+              description: string;
+              url: string;
+              name: string;
+              thumbnail_image_url: string;
+              logo_url: string;
+            }) => {
+              return <PortfolioItem key={item.id} item={item} />;
+            }
+          )}
         </div>
       )}
     </div>

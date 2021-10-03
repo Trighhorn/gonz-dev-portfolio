@@ -19,19 +19,19 @@ function Homepage() {
       </div>
       <div className="links-wrapper">
         <a href="https://github.com/Trighhorn" className="link github">
-          <FontAwesomeIcon icon={faGithub} alt="github" />
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
           href="https://www.linkedin.com/in/agonzalez-19/"
           className="link linkedin"
         >
-          <FontAwesomeIcon icon={faLinkedin} alt="linkedin" />
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a
           href="https://drive.google.com/file/d/1FwxHPkf8tlrvWDtTEeHvIVMbcj_ZgkpF/view?usp=sharing"
           className="link resume"
         >
-          <FontAwesomeIcon icon={faFile} alt="resume" />
+          <FontAwesomeIcon icon={faFile} />
         </a>
       </div>
     </div>

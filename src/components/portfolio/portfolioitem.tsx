@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const PortfolioItem = (props) => {
+interface PortfolioItemType {
+  item: {
+    id: string;
+    description: string;
+    url: string;
+    name: string;
+    thumbnail_image_url: string;
+    logo_url: string;
+  };
+}
+
+const PortfolioItem = (props: PortfolioItemType) => {
   const [portfolioItemClass, setPortfolioItemClass] = useState("");
 
   const { id, description } = props.item;
@@ -24,9 +35,11 @@ const PortfolioItem = (props) => {
       >
         <div
           className={"portfolio-img-background " + portfolioItemClass}
-          style={{
-            // backgroundImage: `url(${thumb_image_url})`,
-          }}
+          style={
+            {
+              // backgroundImage: `url(${thumb_image_url})`,
+            }
+          }
         />
         <div className="img-text-wrapper">
           <div className="logo-wrapper">{/* <img src={logo_url} /> */}</div>

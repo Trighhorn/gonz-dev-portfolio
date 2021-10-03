@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage";
 import Portfolio from "./portfolio/portfolio";
 import Navbar from "./navigation/navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
 
 function App() {
   return (
