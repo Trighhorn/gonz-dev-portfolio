@@ -7,7 +7,7 @@ interface PortfolioItemType {
     description: string;
     url: string;
     name: string;
-    thumbnail_image_url: string;
+    thumb_image_url: string;
     logo_url: string;
   };
 }
@@ -15,7 +15,7 @@ interface PortfolioItemType {
 const PortfolioItem = (props: PortfolioItemType) => {
   const [portfolioItemClass, setPortfolioItemClass] = useState("");
 
-  const { id, description } = props.item;
+  const { id, description, thumb_image_url, logo_url } = props.item;
   // add url support
   // const { id, name, description, thumb_image_url, logo_url } = this.props.item
 
@@ -35,14 +35,12 @@ const PortfolioItem = (props: PortfolioItemType) => {
       >
         <div
           className={"portfolio-img-background " + portfolioItemClass}
-          style={
-            {
-              // backgroundImage: `url(${thumb_image_url})`,
-            }
-          }
+          style={{
+            backgroundImage: `url(${thumb_image_url})`,
+          }}
         />
         <div className="img-text-wrapper">
-          <div className="logo-wrapper">{/* <img src={logo_url} /> */}</div>
+          <div className="logo-wrapper">{<img src={logo_url} alt='programming language logo' />}</div>
           <div className="subtitle">{description}</div>
         </div>
       </div>

@@ -1,20 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import PortfolioItem from "./portfolioitem";
 
+type Item = {
+  item: Array<object>;
+  id: string;
+  description: string;
+  url: string;
+  name: string;
+  thumb_image_url: string;
+  logo_url: string;
+};
+
 function Portfolio() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<object[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  const fetchPortfolio = useCallback(() => {
     axios
-      .get("https://gonz-dev-portfolio-backend.uw.r.appspot.com/portfolio/")
+      .get("https://abrahangonzalez.devcamp.space/portfolio/portfolio_items")
+      // .get("https://gonz-dev-portfolio-backend.uw.r.appspot.com/portfolio/")
       .then((res) => {
-        const portfolioData = res.data;
-        setData(portfolioData);
+        setData(res.data.portfolio_items);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
         setIsLoading(false);
       });
-  }, [data]);
+  }, []);
+
+  useEffect(() => {
+    fetchPortfolio();
+  }, [fetchPortfolio]);
+
+  function portfolioItems() {
+    return data.map((item: Item) => {
+      return <PortfolioItem key={item.id} item={item} />;
+    });
+  }
 
   return (
     <div className="portfolio-page page-wrapper">
@@ -23,18 +48,9 @@ function Portfolio() {
         <div>Loading...</div>
       ) : (
         <div className="portfolio-contaner">
-          {data.map(
-            (item: {
-              id: string;
-              description: string;
-              url: string;
-              name: string;
-              thumbnail_image_url: string;
-              logo_url: string;
-            }) => {
-              return <PortfolioItem key={item.id} item={item} />;
-            }
-          )}
+          {data.map((item) => {
+            return <div>{portfolioItems()}</div>;
+          })}
         </div>
       )}
     </div>
